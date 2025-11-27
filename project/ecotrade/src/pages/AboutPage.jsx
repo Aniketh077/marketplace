@@ -3,36 +3,36 @@ import React from 'react';
 export default function AboutPage() {
   const highlights = [
     {
-      title: 'Mission',
+      title: 'Our Mission',
       description:
-        'Enable transparent and efficient sourcing of post-consumer recycled (PCR) materials for enterprises of every size.'
+        'To democratize access to premium Post-Consumer Recycled materials, empowering industries to transition from virgin inputs to sustainable alternatives with confidence and transparency.'
     },
     {
-      title: 'Network',
+      title: 'Our Network',
       description:
-        '250+ verified PCR suppliers and processors across plastics, metals, and specialty materials.'
+        'A rigorously vetted ecosystem of 250+ certified PCR suppliers and processors specializing in plastics, metals, composites, and specialty recycled materials.'
     },
     {
-      title: 'Impact',
+      title: 'Our Impact',
       description:
-        'Helping manufacturers replace virgin inputs and achieve sustainability targets without compromising quality.'
+        'Enabling manufacturers worldwide to meet ambitious sustainability commitments while maintaining stringent quality standards and optimizing procurement costs.'
     }
   ];
 
   const processSteps = [
     {
-      title: 'Discovery',
-      description: 'We understand your technical specs, compliance requirements, and recurring demand.'
+      title: 'Requirements Discovery',
+      description: 'Our specialists conduct in-depth consultations to understand your technical specifications, compliance frameworks, volume requirements, and delivery timelines.'
     },
     {
-      title: 'Curation',
+      title: 'Intelligent Matching',
       description:
-        'Our supplier intelligence engine shortlists qualified PCR producers with proven track record.'
+        'Leveraging our proprietary supplier intelligence platform, we identify and shortlist qualified PCR producers with verified certifications and proven supply chain reliability.'
     },
     {
-      title: 'Fulfillment',
+      title: 'End-to-End Fulfillment',
       description:
-        'Dedicated success managers coordinate samples, documentation, and logistics until your material is received.'
+        'Dedicated account managers orchestrate the entire process—from sample coordination and quality documentation to logistics management and ongoing supply monitoring.'
     }
   ];
 
@@ -45,11 +45,10 @@ export default function AboutPage() {
               About Eco Marketplace
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-              Building a reliable supply chain for post-consumer recycled materials.
+              Powering the Circular Economy Through Premium PCR Materials
             </h1>
             <p className="text-lg text-green-100 leading-relaxed">
-              We connect global brands, OEMs, and specialized manufacturers with verified PCR suppliers, helping
-              sustainability teams hit recycled-content targets faster.
+              We bridge the gap between sustainability ambition and supply chain execution—connecting global enterprises, OEMs, and innovative manufacturers with best-in-class Post-Consumer Recycled material suppliers.
             </p>
           </div>
         </div>
@@ -73,15 +72,13 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <p className="text-sm uppercase tracking-widest text-green-600 font-semibold mb-4">
-                How we work
+                Our Methodology
               </p>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Expert sourcing support from the first inquiry to repeat shipments.
+                White-Glove PCR Sourcing from Discovery to Deployment
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Eco Marketplace blends data, domain knowledge, and on-ground audits to remove guesswork from PCR sourcing.
-                We validate feedstock availability, processing capabilities, and certifications so procurement teams can
-                launch new recycled programs with confidence.
+                Eco Marketplace synthesizes advanced data analytics, deep industry expertise, and comprehensive supplier audits to eliminate risk from recycled material procurement. We validate feedstock provenance, processing capabilities, and compliance certifications—enabling your team to launch ambitious recycled content programs with full confidence.
               </p>
               <div className="space-y-5">
                 {processSteps.map((step, index) => (
@@ -98,20 +95,19 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="bg-gray-900 text-white rounded-3xl p-8 shadow-lg">
-              <p className="text-green-300 text-sm uppercase tracking-widest mb-4">Sustainability Outcomes</p>
-              <h3 className="text-3xl font-bold mb-4">1M+ kgs of PCR materials delivered</h3>
+              <p className="text-green-300 text-sm uppercase tracking-widest mb-4">Measurable Impact</p>
+              <h3 className="text-3xl font-bold mb-4">1M+ Kilograms of Premium PCR Materials Delivered</h3>
               <p className="text-gray-200 leading-relaxed">
-                Customers rely on Eco Marketplace to accelerate their transition away from virgin feedstock. Our platform
-                centralizes verified suppliers, contract execution, and supply visibility so teams can scale quickly.
+                Industry leaders partner with Eco Marketplace to accelerate their transition to circular material strategies. Our integrated platform provides end-to-end visibility—from supplier verification and contract negotiation to shipment tracking and quality assurance—enabling rapid scaling without compromising on standards.
               </p>
               <div className="mt-6 grid grid-cols-2 gap-4">
                 <div className="bg-white/10 rounded-xl p-4">
                   <p className="text-2xl font-bold">98%</p>
-                  <p className="text-sm text-gray-200">On-spec shipments</p>
+                  <p className="text-sm text-gray-200">Quality compliance rate</p>
                 </div>
                 <div className="bg-white/10 rounded-xl p-4">
-                  <p className="text-2xl font-bold">45%</p>
-                  <p className="text-sm text-gray-200">Average cost savings</p>
+                  <p className="text-2xl font-bold">250+</p>
+                  <p className="text-sm text-gray-200">Verified suppliers</p>
                 </div>
               </div>
             </div>

@@ -45,7 +45,7 @@ const RequestConfirmationPage = () => {
           </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Request Submitted Successfully!</h1>
           <p className="text-gray-600">
-            Thank you for your interest. We have received your request and will contact you shortly.
+            Thank you for choosing Eco Marketplace. Our sourcing specialists have received your request and will contact you within 24 hours.
           </p>
         </div>
 
@@ -84,15 +84,15 @@ const RequestConfirmationPage = () => {
           <ul className="space-y-2 text-gray-600">
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
-              Our team will review your request within 24 hours
+              Our sourcing specialists will review your requirements within 24 hours
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
-              We will contact you via the email or phone number provided
+              We will contact you via email or phone to discuss your specifications
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-2">•</span>
-              You will receive a detailed quote and delivery timeline
+              You will receive a comprehensive quote with quality documentation and delivery timeline
             </li>
           </ul>
         </div>

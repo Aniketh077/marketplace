@@ -223,7 +223,7 @@ export default function MaterialDetailPage() {
                       value={formData.buyerMobile}
                       onChange={(e) => setFormData({ ...formData, buyerMobile: e.target.value })}
                       className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      placeholder="9876543210"
+                      placeholder="8861009443"
                     />
                   </div>
                 </div>

@@ -58,24 +58,27 @@ export default function EcoHomePage() {
       <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm uppercase tracking-widest text-green-200 font-semibold mb-4">
+              B2B Recycled Materials Marketplace
+            </p>
             <h1 className="text-5xl font-bold mb-6">
-              Eco Marketplace for PCR Materials
+              Premium Post-Consumer Recycled Materials for Industry
             </h1>
             <p className="text-xl mb-8 text-green-100">
-              Connecting Industries with Sustainable Post-Consumer Recycled Materials
+              Connect with verified PCR suppliers. Accelerate your sustainability goals with quality-certified recycled content.
             </p>
             <div className="flex gap-4 justify-center">
               <Link
                 to="/eco-industries"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition shadow-lg"
               >
-                Browse Industries
+                Explore Industries
               </Link>
               <Link
                 to="/eco-materials"
-                className="bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition"
+                className="bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition border-2 border-green-100"
               >
-                View All Materials
+                Browse Materials
               </Link>
             </div>
           </div>
@@ -87,13 +90,13 @@ export default function EcoHomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
               <p className="text-sm uppercase tracking-wide text-green-600 font-semibold">
-                Industries
+                Industries We Serve
               </p>
               <h2 className="text-3xl font-bold text-gray-800">
-                Industries We Serve
+                Trusted by Leading Sectors
               </h2>
               <p className="text-gray-600 mt-2">
-                Scroll horizontally to explore the sectors partnering with us
+                Connecting manufacturers with sustainable material solutions across diverse industries
               </p>
             </div>
             <Link
@@ -167,9 +170,14 @@ export default function EcoHomePage() {
       {featuredMaterials.length > 0 && (
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-              Featured Materials
-            </h2>
+            <div className="text-center mb-12">
+              <p className="text-sm uppercase tracking-wide text-green-600 font-semibold mb-2">
+                Quality Certified
+              </p>
+              <h2 className="text-3xl font-bold text-gray-800">
+                Featured PCR Materials
+              </h2>
+            </div>
             <div className="-mx-4 px-4 relative">
               <button
                 className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full w-10 h-10 items-center justify-center text-green-600 hover:bg-green-50 transition"
@@ -231,35 +239,40 @@ export default function EcoHomePage() {
 
       <section className="py-16 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            Why Choose Eco Marketplace?
-          </h2>
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-wide text-green-600 font-semibold mb-2">
+              The Eco Marketplace Advantage
+            </p>
+            <h2 className="text-3xl font-bold text-gray-800">
+              Why Industry Leaders Choose Us
+            </h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
               <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 1
               </div>
-              <h3 className="text-xl font-bold mb-2">Quality Assured</h3>
-              <p className="text-gray-600">
-                All PCR materials are certified and tested for quality compliance
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Certified Quality</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Every PCR material undergoes rigorous testing and certification to meet international quality standards and compliance requirements.
               </p>
             </div>
-            <div className="text-center">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
               <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 2
               </div>
-              <h3 className="text-xl font-bold mb-2">Sustainable Sourcing</h3>
-              <p className="text-gray-600">
-                Supporting circular economy through responsible recycling
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Verified Suppliers</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Access a curated network of pre-vetted suppliers with proven track records in sustainable material processing and delivery.
               </p>
             </div>
-            <div className="text-center">
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
               <div className="bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                 3
               </div>
-              <h3 className="text-xl font-bold mb-2">Fast Response</h3>
-              <p className="text-gray-600">
-                Expert team responds to requests within 24-48 hours
+              <h3 className="text-xl font-bold mb-3 text-gray-900">Expert Support</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Dedicated sourcing specialists respond within 24 hours to coordinate samples, documentation, and logistics.
               </p>
             </div>
           </div>
@@ -269,17 +282,25 @@ export default function EcoHomePage() {
       <section className="py-16 bg-green-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">
-            Ready to Source Sustainable Materials?
+            Ready to Accelerate Your Sustainability Journey?
           </h2>
           <p className="text-xl mb-8 text-green-100">
-            Browse our catalog and submit a request. No registration required.
+            Connect with verified PCR suppliers and transform your material sourcing strategy today.
           </p>
-          <Link
-            to="/eco-industries"
-            className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition"
-          >
-            Get Started
-          </Link>
+          <div className="flex gap-4 justify-center">
+            <Link
+              to="/eco-materials"
+              className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition shadow-lg"
+            >
+              Browse Materials
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-block bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition border-2 border-white"
+            >
+              Contact Our Team
+            </Link>
+          </div>
         </div>
       </section>
     </div>

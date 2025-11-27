@@ -50,13 +50,13 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.4em] text-green-200 font-semibold mb-3">
-              Contact
+              Get In Touch
             </p>
             <h1 className="text-4xl font-bold mb-4">
-              Talk to our sourcing specialists
+              Connect With Our PCR Sourcing Specialists
             </h1>
             <p className="text-lg text-green-100">
-              Share your requirements and we’ll curate PCR suppliers, documentation, and samples tailored to your specs.
+              Share your material requirements and sustainability objectives. Our team will curate qualified suppliers, technical documentation, and certified samples tailored to your exact specifications.
             </p>
           </div>
         </div>
@@ -71,20 +71,25 @@ export default function ContactPage() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <p className="text-sm text-gray-500 uppercase mb-1">Email</p>
-                  <p className="text-lg text-gray-800 font-semibold">team@eco-dispose.com</p>
+                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Business Inquiries</p>
+                  <a href="mailto:sales@ecodispose.com" className="text-lg text-green-600 font-semibold hover:underline">
+                    sales@ecodispose.com
+                  </a>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 uppercase mb-1">Phone</p>
-                  <p className="text-lg text-gray-800 font-semibold">+91 98765 43210</p>
+                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Direct Line</p>
+                  <a href="tel:+918861009443" className="text-lg text-green-600 font-semibold hover:underline">
+                    +91 88610 09443
+                  </a>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 uppercase mb-1">Office</p>
-                  <p className="text-lg text-gray-800 font-semibold">
-                    Bengaluru, India
+                  <p className="text-sm text-gray-500 uppercase tracking-wider mb-2">Business Hours</p>
+                  <p className="text-gray-700 leading-relaxed">
+                    Monday – Friday<br />
+                    9:30 AM – 6:30 PM IST
                   </p>
-                  <p className="text-gray-600">
-                    Available Monday–Friday, 9:30 AM - 6:30 PM IST
+                  <p className="text-sm text-gray-500 mt-2">
+                    Responses within 24 hours during business days
                   </p>
                 </div>
               </div>
@@ -92,12 +97,12 @@ export default function ContactPage() {
 
             <div className="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                Send us a message
+                Request a Consultation
               </h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">
                       Full Name *
                     </label>
                     <input
@@ -110,8 +115,8 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Work Email *
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">
+                      Business Email *
                     </label>
                     <input
                       type="email"
@@ -125,8 +130,8 @@ export default function ContactPage() {
                 </div>
                 <div className="grid md:grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone (optional)
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">
+                      Contact Number
                     </label>
                     <input
                       type="tel"
@@ -134,12 +139,12 @@ export default function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 88610 09443"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Company
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">
+                      Company / Organization
                     </label>
                     <input
                       type="text"
@@ -147,13 +152,13 @@ export default function ContactPage() {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                      placeholder="Company / Organization"
+                      placeholder="Your Company Name"
                     />
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    How can we help? *
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">
+                    Material Requirements & Objectives *
                   </label>
                   <textarea
                     name="message"
@@ -161,7 +166,7 @@ export default function ContactPage() {
                     onChange={handleChange}
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                    placeholder="Tell us about your PCR sourcing goals, volumes, and timelines..."
+                    placeholder="Please describe your PCR material requirements, target volumes, quality specifications, delivery timelines, and sustainability objectives..."
                     required
                   />
                 </div>
@@ -170,7 +175,7 @@ export default function ContactPage() {
                   disabled={submitting}
                   className="w-full bg-green-600 text-white font-semibold text-lg py-3 rounded-lg hover:bg-green-700 transition disabled:bg-gray-400"
                 >
-                  {submitting ? 'Sending...' : 'Send Message'}
+                  {submitting ? 'Submitting Request...' : 'Submit Consultation Request'}
                 </button>
               </form>
             </div>
