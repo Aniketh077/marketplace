@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const sellerRequestController = require('../controllers/sellerRequestController');
 const auth = require('../middlewares/auth');
-const admin = require('../middlewares/admin');
+const { isAdmin } = require('../middlewares/admin');
 
 router.post('/', sellerRequestController.createSellerRequest);
 
-router.get('/', auth, admin, sellerRequestController.getAllSellerRequests);
+router.get('/', auth, isAdmin, sellerRequestController.getAllSellerRequests);
 
-router.put('/:id', auth, admin, sellerRequestController.updateSellerRequest);
+router.put('/:id', auth, isAdmin, sellerRequestController.updateSellerRequest);
 
-router.delete('/:id', auth, admin, sellerRequestController.deleteSellerRequest);
+router.delete('/:id', auth, isAdmin, sellerRequestController.deleteSellerRequest);
 
 module.exports = router;
