@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Store } from 'lucide-react';
+import BecomeSellerModal from '../modals/BecomeSellerModal';
 
 export default function EcoHeader() {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showSellerModal, setShowSellerModal] = useState(false);
 
   const navLinks = [
     { to: '/eco-home', label: 'Home' },
@@ -26,17 +28,26 @@ export default function EcoHeader() {
             </div>
           </Link>
 
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="text-gray-700 hover:text-green-600 font-medium transition"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden lg:flex items-center space-x-6">
+            <nav className="flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-gray-700 hover:text-green-600 font-medium transition"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            <button
+              onClick={() => setShowSellerModal(true)}
+              className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition shadow-sm"
+            >
+              <Store className="w-4 h-4" />
+              <span>Become a Seller</span>
+            </button>
+          </div>
 
           <button
             className="lg:hidden text-gray-700 hover:text-green-600 transition"
@@ -60,10 +71,25 @@ export default function EcoHeader() {
                   {link.label}
                 </Link>
               ))}
+              <button
+                onClick={() => {
+                  setShowSellerModal(true);
+                  setMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition justify-center mt-4"
+              >
+                <Store className="w-4 h-4" />
+                <span>Become a Seller</span>
+              </button>
             </nav>
           </div>
         )}
       </div>
+
+      <BecomeSellerModal
+        isOpen={showSellerModal}
+        onClose={() => setShowSellerModal(false)}
+      />
     </header>
   );
 }

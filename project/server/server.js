@@ -11,6 +11,7 @@ const materialRoutes = require('./routes/materialRoutes');
 const buyerRequestRoutes = require('./routes/buyerRequestRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
+const sellerRequestRoutes = require('./routes/sellerRequestRoutes');
 
 const app = express();
 
@@ -64,6 +65,7 @@ app.use('/api/materials', materialRoutes);
 app.use('/api/buyer-requests', buyerRequestRoutes);
 app.use('/api/contact', contactRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/seller-requests', sellerRequestRoutes);
 
 app.get('/api/health', (req, res) => {
   res.json({
@@ -83,6 +85,7 @@ app.get('/', (req, res) => {
       industries: '/api/industries',
       materials: '/api/materials',
       buyerRequests: '/api/buyer-requests',
+      sellerRequests: '/api/seller-requests',
       analytics: '/api/analytics'
     }
   });

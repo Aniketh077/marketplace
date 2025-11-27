@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogOut, Menu, X, ChevronRight, ChevronLeft, BarChart3, Factory, PackageOpen, FileText, Mail } from 'lucide-react';
+import { LogOut, Menu, X, ChevronRight, ChevronLeft, BarChart3, Factory, PackageOpen, FileText, Mail, Store } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import AdminEcoHome from './AdminEcoHome';
 import AdminEcoIndustries from './AdminEcoIndustries';
 import AdminEcoMaterials from './AdminEcoMaterials';
 import AdminEcoRequests from './AdminEcoRequests';
 import AdminContactMessages from './AdminContactMessages';
+import AdminSellerRequests from './AdminSellerRequests';
 
 const AdminTab = {
   DASHBOARD: 'dashboard',
@@ -14,6 +15,7 @@ const AdminTab = {
   MATERIALS: 'materials',
   REQUESTS: 'requests',
   CONTACTS: 'contacts',
+  SELLERS: 'sellers',
 };
 
 const AdminDashboard = () => {
@@ -79,6 +81,7 @@ const AdminDashboard = () => {
     { key: AdminTab.INDUSTRIES, label: 'Industries', icon: Factory },
     { key: AdminTab.MATERIALS, label: 'Materials', icon: PackageOpen },
     { key: AdminTab.REQUESTS, label: 'Buyer Requests', icon: FileText },
+    { key: AdminTab.SELLERS, label: 'Seller Requests', icon: Store },
     { key: AdminTab.CONTACTS, label: 'Contact Leads', icon: Mail },
   ];
 
@@ -92,6 +95,8 @@ const AdminDashboard = () => {
         return <AdminEcoMaterials />;
       case AdminTab.REQUESTS:
         return <AdminEcoRequests />;
+      case AdminTab.SELLERS:
+        return <AdminSellerRequests />;
       case AdminTab.CONTACTS:
         return <AdminContactMessages />;
       default:
