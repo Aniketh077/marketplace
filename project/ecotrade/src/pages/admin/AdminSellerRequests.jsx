@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, Mail, Phone, Building2, CheckCircle, XCircle, Clock, Trash2 } from 'lucide-react';
+import { sellerRequestAPI } from '../../api/sellerRequestAPI';
 
 export default function AdminSellerRequests() {
   const [sellerRequests, setSellerRequests] = useState([]);
@@ -21,16 +22,9 @@ export default function AdminSellerRequests() {
   const fetchSellerRequests = async () => {
     try {
       setLoading(true);
-      const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:5000/api/seller-requests', {
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setSellerRequests(data.data);
+      const response = await sellerRequestAPI.getAll();
+      if (response.success) {
+        setSellerRequests(response.data);
       }
     } catch (error) {
       console.error('Error fetching seller requests:', error);
@@ -61,18 +55,8 @@ export default function AdminSellerRequests() {
 
   const updateRequestStatus = async (id, status, notes = '') => {
     try {
-      const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/seller-requests/${id}`, {
-        method: 'PUT',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ status, notes })
-      });
-
-      const data = await response.json();
-      if (data.success) {
+      const response = await sellerRequestAPI.update(id, { status, notes });
+      if (response.success) {
         await fetchSellerRequests();
         setShowDetailsModal(false);
       }
@@ -87,16 +71,8 @@ export default function AdminSellerRequests() {
     }
 
     try {
-      const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/seller-requests/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${token}`
-        }
-      });
-
-      const data = await response.json();
-      if (data.success) {
+      const response = await sellerRequestAPI.delete(id);
+      if (response.success) {
         await fetchSellerRequests();
         setShowDetailsModal(false);
       }
