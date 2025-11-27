@@ -46,8 +46,15 @@ export default function ContactPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-16 md:py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="/assets/Hero3.jpg"
+            alt="Contact Us"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.4em] text-green-200 font-semibold mb-3">
               Get In Touch

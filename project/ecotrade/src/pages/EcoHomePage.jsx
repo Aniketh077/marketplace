@@ -55,19 +55,26 @@ export default function EcoHomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-20 md:py-32 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="/assets/Hero1.jpg"
+            alt="Sustainable Recycling"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm uppercase tracking-widest text-green-200 font-semibold mb-4">
+            <p className="text-sm uppercase tracking-widest text-green-200 font-semibold mb-4 animate-fade-in">
               B2B Recycled Materials Marketplace
             </p>
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Premium Post-Consumer Recycled Materials for Industry
             </h1>
-            <p className="text-xl mb-8 text-green-100">
+            <p className="text-lg md:text-xl mb-8 text-green-100 max-w-3xl mx-auto">
               Connect with verified PCR suppliers. Accelerate your sustainability goals with quality-certified recycled content.
             </p>
-            <div className="flex gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/eco-industries"
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition shadow-lg"
@@ -81,6 +88,138 @@ export default function EcoHomePage() {
                 Browse Materials
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-wide text-green-600 font-semibold mb-2">
+              Our Process
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              How Eco Marketplace Works
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From discovery to delivery, we simplify PCR material sourcing with our streamlined 3-step process
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="relative">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 h-full border-2 border-green-200">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-600 text-white text-2xl font-bold mb-6 mx-auto">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  Choose Material
+                </h3>
+                <p className="text-gray-700 text-center mb-6">
+                  Browse our extensive catalog of Post-Consumer Recycled materials across multiple industries
+                </p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-0.5">✓</span>
+                    <span>500+ verified PCR materials</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-0.5">✓</span>
+                    <span>Advanced search & filters</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-0.5">✓</span>
+                    <span>Detailed specifications</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-600 mt-0.5">✓</span>
+                    <span>Real-time availability</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center text-white">
+                  →
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 h-full border-2 border-blue-200">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-2xl font-bold mb-6 mx-auto">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                  Validate Supply
+                </h3>
+                <p className="text-gray-700 text-center mb-6">
+                  Verify material quality and compliance with comprehensive documentation and certifications
+                </p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 mt-0.5">✓</span>
+                    <span>ISO certified quality</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 mt-0.5">✓</span>
+                    <span>Third-party test reports</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 mt-0.5">✓</span>
+                    <span>Compliance certificates</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600 mt-0.5">✓</span>
+                    <span>Supplier audit reports</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="hidden md:block absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+                <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                  →
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 h-full border-2 border-orange-200">
+              <div className="flex items-center justify-center w-16 h-16 rounded-full bg-orange-600 text-white text-2xl font-bold mb-6 mx-auto">
+                3
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                Start Sourcing
+              </h3>
+              <p className="text-gray-700 text-center mb-6">
+                Request quotes, coordinate samples, and receive materials with full logistics support
+              </p>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-0.5">✓</span>
+                  <span>24-hour quote response</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-0.5">✓</span>
+                  <span>Free sample coordination</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-0.5">✓</span>
+                  <span>End-to-end logistics</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600 mt-0.5">✓</span>
+                  <span>Dedicated support team</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/eco-materials"
+              className="inline-flex items-center gap-2 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition shadow-lg"
+            >
+              Start Sourcing Now
+              <span>→</span>
+            </Link>
           </div>
         </div>
       </section>

@@ -38,8 +38,15 @@ export default function AboutPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-16 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <img
+            src="/assets/Hero2.jpg"
+            alt="Sustainable Materials"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <p className="uppercase text-sm tracking-[0.35em] text-green-200 font-semibold">
               About Eco Marketplace

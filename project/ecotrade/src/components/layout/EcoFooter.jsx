@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Youtube, Instagram, Linkedin } from 'lucide-react';
+import HowItWorksModal from '../modals/HowItWorksModal';
+import FAQModal from '../modals/FAQModal';
+import QualityStandardsModal from '../modals/QualityStandardsModal';
 
 export default function EcoFooter() {
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
+  const [showFAQ, setShowFAQ] = useState(false);
+  const [showQualityStandards, setShowQualityStandards] = useState(false);
+
   return (
-    <footer className="bg-gray-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <>
+      <footer className="bg-gray-900 text-gray-300">
+        <div className="container mx-auto px-4 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <img src="/logo_light.png" alt="Eco Marketplace" className="h-10 w-auto" />
@@ -43,7 +51,7 @@ export default function EcoFooter() {
           </div>
 
           <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
+            <h4 className="text-white font-semibold mb-4">Resources</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/contact" className="hover:text-[#10B981] transition">
@@ -51,19 +59,28 @@ export default function EcoFooter() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-[#10B981] transition">
+                <button
+                  onClick={() => setShowHowItWorks(true)}
+                  className="hover:text-[#10B981] transition text-left"
+                >
                   How It Works
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="hover:text-[#10B981] transition">
+                <button
+                  onClick={() => setShowFAQ(true)}
+                  className="hover:text-[#10B981] transition text-left"
+                >
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => setShowQualityStandards(true)}
+                  className="hover:text-[#10B981] transition text-left"
+                >
                   Quality Standards
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-[#10B981] transition">
-                  Sustainability Resources
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -112,5 +129,10 @@ export default function EcoFooter() {
         </div>
       </div>
     </footer>
+
+    <HowItWorksModal isOpen={showHowItWorks} onClose={() => setShowHowItWorks(false)} />
+    <FAQModal isOpen={showFAQ} onClose={() => setShowFAQ(false)} />
+    <QualityStandardsModal isOpen={showQualityStandards} onClose={() => setShowQualityStandards(false)} />
+  </>
   );
 }
